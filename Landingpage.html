@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* HEADER */
+    .main-header {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      padding: 25px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .main-header h1 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      color: #00d4ff;
+    }
+
+    .main-header nav {
+      text-align: center;
+    }
+
+    .main-header nav a {
+      color: #fff;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    .main-header nav a:hover {
+      color: #00d4ff;
+    }
+
+    /* HERO */
+    .hero-section {
+      background: url('https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg') center center/cover no-repeat;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6); 
+      z-index: -1;
+    }
+
+    .hero-section h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero-section p {
+      font-size: 1.25em;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      padding: 14px 30px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1em;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 114, 255, 0.4);
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+    }
+
+    /* FEATURES */
+    .features-section {
+      position: relative;
+      background: url('https://images.pexels.com/photos/1687575/pexels-photo-1687575.jpeg') center center/cover no-repeat;
+      padding: 60px 20px;
+      color: white;
+      z-index: 1;
+    }
+
+    .features-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6); 
+      z-index: -1;
+    }
+
+    .features {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .feature-box {
+      flex: 1;
+      min-width: 260px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-box h3 {
+      margin-bottom: 12px;
+      color: #00d4ff;
+      font-size: 1.5em;
+    }
+
+    .feature-box p {
+      color: #f2f2f2;
+      font-size: 1em;
+    }
+
+    /* FOOTER */
+    .main-footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    /* RESPONSIVE */
+    @media screen and (max-width: 768px) {
+      .hero-section h2 {
+        font-size: 2em;
+      }
+
+      .btn {
+        padding: 12px 25px;
+        font-size: 0.95em;
+      }
+
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container">
+      <h1>My Creative Landing Page</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="container">
+      <h2>Build Your First Landing Page</h2>
+      <p>This project teaches HTML & CSS basics while unlocking your design creativity. Learn by doing, and build something beautiful.</p>
+      <a href="#" class="btn">Start Now</a>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="container features">
+      <div class="feature-box">
+        <h3>Structured Layout</h3>
+        <p>Practice dividing content into responsive columns and neatly aligned sections.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Clean Design</h3>
+        <p>Use padding, spacing, and a consistent color palette to create a modern look.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Footer Practice</h3>
+        <p>Learn how to build balanced headers and footers that tie the page together.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 Beginner Project. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
